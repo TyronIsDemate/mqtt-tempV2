@@ -1,0 +1,159 @@
+<html>
+
+<head>
+  <title>TEMPERATURE</title>
+  <link rel="icon" href="https://icon-library.net/images/bumble-bee-icon/bumble-bee-icon-3.jpg" type="icon">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+    crossorigin="anonymous">
+    <style>
+      label{
+        font-weight: bold;
+        font-style: italic;
+      }
+    </style>
+</head>
+
+
+<body>
+  <div class="jumbotron text-center">
+    <h1><img src="https://icon-library.net/images/bumble-bee-icon/bumble-bee-icon-3.jpg" width="50" height="50">MQTT</h1>
+    <p>Temperature App</p>
+  </div>
+
+  <!-- Accepts Inputs -->
+  <section class="features-icons bg-light ">
+    <div class="container text-center">
+
+      <center>
+        <!-- Broker -->
+        <div style="border:solid 1px black;text-align: center;width: 500px;">
+          <h1>Broker</h1>
+          Address: <input id="broker" type="text" value="wss://test.mosquitto.org:8081/mqtt"><br><br>
+          <input id="connect" onclick="connectFunc()" class="btn btn-primary" value="Connect">
+          <input id="disconnect" onclick="disconnectFunc()" class="btn btn-danger" type="button" value="Disconnect"
+            disabled><br><br>
+          Status: <input id="status" class="btn btn-default" type="button" value="_______________________" disabled><br><br>
+        </div>
+        
+      </center>
+      <br>
+      <br>
+
+
+      <div class="row">
+
+        <div class="col-lg-3 ">
+          <h5>Group 1 </h5>
+          <form style="border:blue 2px solid;height:75px">
+            <label for="fname">Christopher/CherryMae Temperature:</label>
+            <input type="text" id="g1" name="fname" value="alonzobarlas\temperature">
+          </form>
+        </div>
+
+        <div class="col-lg-3 ">
+          <h5>Group 2 </h5>
+          <form style="border:blue 2px solid;height:75px">
+            <label for="fname">MariaTheresa/Anabelle Temperature:</label>
+            <input type="text" id="g2" name="fname" value="amabel">
+          </form>
+        </div>
+
+        <div class="col-lg-3">
+          <h5>Group 3 </h5>
+          <form style="border:blue 2px solid;height:75px">
+            <label for="fname">Roselyn/Danica Temperature:</label>
+            <input type="text" id="g3" name="fname" value="rosedaine">
+          </form>
+        </div>
+
+        <div class="col-lg-3">
+          <h5>Group 4 </h5>
+          <form style="border:blue 2px solid;height:75px">
+            <label for="fname"> Temperature:</label>
+            <input type="text" id="g4" name="fname" value="">
+          </form>
+        </div>
+      </div>
+      <br>
+      <div class="row">
+
+        <div class="col-lg-3 ">
+          <h5>Group 5 </h5>
+          <form style="border:blue 2px solid;height:75px">
+            <label for="fname"> Temperature:</label>
+            <input type="text" id="g5" name="fname" value="">
+          </form>
+        </div>
+
+        <div class="col-lg-3 ">
+          <h5>Group 6 </h5>
+          <form style="border:blue 2px solid;height:75px">
+            <label for="fname">Renzy/Claire Temperature:</label>
+            <input type="text" id="g6" name="fname" value="renzyclaire/temp">
+          </form>
+        </div>
+
+        <div class="col-lg-3">
+          <h5>Group 7 </h5>
+          <form style="border:blue 2px solid;height:75px">
+            <label for="fname">Luzmibel/Adrian Temperature:</label>
+            <input type="text" id="g7" name="fname" value="Luz-Ian/temp">
+          </form>
+        </div>
+
+        <div class="col-lg-3">
+          <h5>Group 8 </h5>
+          <form style="border:blue 2px solid;height:75px">
+            <label for="fname"> Temperature:</label>
+            <input type="text" id="g8" name="fname" value="">
+          </form>
+        </div>
+      </div>
+      <br>
+      <div class="row">
+
+        <div class="col-lg-3 ">
+          <h5>Group 9 </h5>
+          <form style="border:blue 2px solid;height:75px">
+            <label for="fname">JanKenneth/Annalie Temperature:</label>
+            <input type="text" id="g9" name="fname" value="diansin/gabatan/temp">
+          </form>
+        </div>
+
+        <div class="col-lg-3 ">
+          <h5>Group 10</h5>
+          <form style="border:blue 2px solid;height:75px">
+            <label for="fname">Temperature:</label>
+            <input type="text" id="g10" name="fname" value="">
+          </form>
+        </div>
+
+        <div class="col-lg-3">
+          <h5>Group 11 </h5>
+          <form style="border:blue 2px solid;height:75px">
+            <label for="fname">MaryAnn/Aira Temperature:</label>
+            <input type="text" id="g11" name="fname" value="MaryAira\temperature">
+          </form>
+        </div>
+
+        <div class="col-lg-3">
+          <h5>Group 12 </h5>
+          <form style="border:blue 2px solid;height:75px">
+            <label for="fname">Tyrone/Marichu Temperature:</label>
+            <input type="text" id="g12" name="fname" value="tychu/temp">
+          </form>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
+  <script src="/browser-mqtt.js"></script>
+  <script src="/controller.js"></script>
+
+</body>
+
+
+</html>
